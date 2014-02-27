@@ -7,12 +7,12 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
-$inuit-btn-padding:             $inuit-base-spacing-unit !default;
-$inuit-btn-padding--small:      halve($inuit-btn-padding) !default;
-$inuit-btn-padding--large:      double($inuit-btn-padding) !default;
-$inuit-btn-default-background:  #4a8ec2 !default;
-$inuit-btn-default-color:       #fff !default;
-$inuit-btn-radius:              4px !default;
+$inuit-btn-padding:         $inuit-base-spacing-unit !default;
+$inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
+$inuit-btn-padding--large:  double($inuit-btn-padding) !default;
+$inuit-btn-background:      #4a8ec2 !default;
+$inuit-btn-color:           #fff !default;
+$inuit-btn-radius:          4px !default;
 
 $inuit-enable-btn--small:   false !default;
 $inuit-enable-btn--large:   false !default;
@@ -53,7 +53,7 @@ $inuit-global-border-box: false !default;
     cursor: pointer; /* [5] */
     overflow: visible; /* [6] */
     padding: $inuit-btn-padding;
-    background-color: $inuit-btn-default-background;
+    background-color: $inuit-btn-background;
 
     &,
     &:hover,
@@ -61,7 +61,7 @@ $inuit-global-border-box: false !default;
     &:focus,
     &:visited {
         text-decoration: none; /* [4] */
-        color: $inuit-btn-default-color;
+        color: $inuit-btn-color;
     }
 
 }
