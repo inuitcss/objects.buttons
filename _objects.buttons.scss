@@ -154,7 +154,7 @@ $inuit-global-border-box: false !default;
 
     .#{$inuit-namespace}btn--pill,
     %#{$inuit-namespace}btn--pill {
-        border-radius: 100px;
+        border-radius: 100px; /* [1] */
     }
 
 }
