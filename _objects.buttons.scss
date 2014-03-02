@@ -86,7 +86,7 @@ $inuit-global-border-box: false !default;
 @if ($inuit-enable-btn--large == true) {
 
     /**
-     * Small buttons.
+     * Large buttons.
      */
 
     .#{$inuit-namespace}btn--large,
