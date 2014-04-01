@@ -7,7 +7,7 @@
  */
 
 // Predefine the variables below in order to alter and enable specific features.
-$inuit-btn-padding:         $inuit-base-spacing-unit !default;
+$inuit-btn-padding:         halve($inuit-base-spacing-unit) !default;
 $inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
 $inuit-btn-padding--large:  double($inuit-btn-padding) !default;
 $inuit-btn-background:      #4a8ec2 !default;
@@ -52,7 +52,7 @@ $inuit-global-border-box: false !default;
     margin:  0; /* [4] */
     cursor: pointer; /* [5] */
     overflow: visible; /* [6] */
-    padding: $inuit-btn-padding;
+    padding: $inuit-btn-padding double($inuit-btn-padding);
     background-color: $inuit-btn-background;
 
     &,
@@ -78,7 +78,7 @@ $inuit-global-border-box: false !default;
 
     .#{$inuit-namespace}btn--small,
     %#{$inuit-namespace}btn--small {
-        padding: $inuit-btn-padding--small;
+        padding: $inuit-btn-padding--small double($inuit-btn-padding--small);
     }
 
 }
@@ -91,7 +91,7 @@ $inuit-global-border-box: false !default;
 
     .#{$inuit-namespace}btn--large,
     %#{$inuit-namespace}btn--large {
-        padding: $inuit-btn-padding--large;
+        padding: $inuit-btn-padding--large double($inuit-btn-padding--large);
     }
 
 }
