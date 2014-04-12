@@ -1,6 +1,6 @@
 {
   "name": "inuit-buttons",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "homepage": "https://github.com/inuitcss/objects.buttons",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>"
@@ -14,7 +14,7 @@
   ],
   "license": "Apache",
   "dependencies": {
-    "inuit-functions": "~0.1.1",
+    "inuit-functions": "~0.2.0",
     "inuit-defaults": "~0.1.2"
   }
 }

@@ -12,12 +12,14 @@ $inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
 $inuit-btn-padding--large:  double($inuit-btn-padding) !default;
 $inuit-btn-background:      #4a8ec2 !default;
 $inuit-btn-color:           #fff !default;
+$inuit-btn-border-width:    1px !default;
+$inuit-btn-border-style:    solid !default;
+$inuit-btn-border-color:    $inuit-btn-background !default;
 $inuit-btn-radius:          4px !default;
 
 $inuit-enable-btn--small:   false !default;
 $inuit-enable-btn--large:   false !default;
 $inuit-enable-btn--full:    false !default;
-$inuit-enable-btn--round:   false !default;
 $inuit-enable-btn--pill:    false !default;
 
 
@@ -37,10 +39,12 @@ $inuit-global-border-box: false !default;
  * 1. Allow us to style box model properties.
  * 2. Line different sized buttons up a little nicer.
  * 3. Make buttons inherit font styles (often necessary when styling `input`s as
- *    buttons.
+ *    buttons).
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
  * 6. Fixes odd inner spacing in IE7.
+ * 7. Subtract the border size from the padding value so that buttons do not
+ *    grow larger as we add borders.
  */
 .#{$inuit-namespace}btn,
 %#{$inuit-namespace}btn {
@@ -52,8 +56,16 @@ $inuit-global-border-box: false !default;
     margin:  0; /* [4] */
     cursor: pointer; /* [5] */
     overflow: visible; /* [6] */
-    padding: $inuit-btn-padding double($inuit-btn-padding);
+    padding: $inuit-btn-padding - $inuit-btn-border-width  double($inuit-btn-padding) - $inuit-btn-border-width; /* [7] */
     background-color: $inuit-btn-background;
+
+    @if($inuit-btn-border-width != 0) {
+        border: $inuit-btn-border-width $inuit-btn-border-style $inuit-btn-border-color;
+    }
+
+    @if($inuit-btn-radius != 0) {
+        border-radius: $inuit-btn-radius;
+    }
 
     &,
     &:hover,
@@ -118,23 +130,6 @@ $inuit-global-border-box: false !default;
             padding-left:  0;
         }
 
-    }
-
-}
-
-
-
-
-
-@if ($inuit-enable-btn--round == true) {
-
-    /**
-     * Round-cornered buttons.
-     */
-
-    .#{$inuit-namespace}btn--round,
-    %#{$inuit-namespace}btn--round {
-        border-radius: $inuit-btn-radius;
     }
 
 }
