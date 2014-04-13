@@ -90,7 +90,7 @@ $inuit-global-border-box: false !default;
 
     .#{$inuit-namespace}btn--small,
     %#{$inuit-namespace}btn--small {
-        padding: $inuit-btn-padding--small double($inuit-btn-padding--small);
+        padding: $inuit-btn-padding--small - $inuit-btn-border-width  double($inuit-btn-padding--small) - $inuit-btn-border-width; /* [7] */
     }
 
 }
@@ -103,7 +103,7 @@ $inuit-global-border-box: false !default;
 
     .#{$inuit-namespace}btn--large,
     %#{$inuit-namespace}btn--large {
-        padding: $inuit-btn-padding--large double($inuit-btn-padding--large);
+        padding: $inuit-btn-padding--large - $inuit-btn-border-width  double($inuit-btn-padding--large) - $inuit-btn-border-width; /* [7] */
     }
 
 }
