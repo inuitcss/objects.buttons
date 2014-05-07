@@ -85,6 +85,15 @@ $inuit-global-border-box: false !default;
 
 }
 
+/**
+ * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+ */
+.#{$inuit-namespace}btn::-moz-focus-inner,
+%#{$inuit-namespace}btn::-moz-focus-inner {
+    border:  0;
+    padding: 0;
+}
+
 
 
 
