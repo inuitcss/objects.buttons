@@ -76,6 +76,13 @@ $inuit-global-border-box: false !default;
         color: $inuit-btn-color;
     }
 
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: darken($inuit-btn-background, 15%);
+        border-color:     darken($inuit-btn-background, 15%);
+    }
+
 }
 
 
