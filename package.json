@@ -1,6 +1,6 @@
 {
   "name": "inuit-buttons",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "A simple, extensible button object for the inuitcss framework",
   "main": "_objects.buttons.scss",
   "repository": {
